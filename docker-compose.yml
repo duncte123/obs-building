@@ -1,0 +1,19 @@
+version: '3.0'
+
+services:
+  obs-linux:
+    build:
+      dockerfile: './debian.Dockerfile'
+      args:
+        OBS_VERSION: 30.0.2
+    volumes:
+      - './out:/obs-building/out'
+
+
+#volumes:
+#  outdir:
+#    driver: local
+#    driver_opts:
+#      o: bind
+#      type: none
+#      device: /coding/docker/obs-building/out
